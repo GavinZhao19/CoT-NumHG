@@ -46,7 +46,7 @@ def load_instructions(file_path):
     try:
         with open(file_path, 'r', encoding="utf-8") as file:
             data = json.load(file)
-            return data[0]  
+            return data[0]["cot_steps_numerical_reasoning"] 
     except (IOError, IndexError, json.JSONDecodeError) as e:
         print(f"Failed to load instructions: {e}")
         return ""
